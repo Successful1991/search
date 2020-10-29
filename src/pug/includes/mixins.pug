@@ -1,0 +1,33 @@
+
+
+//mixin testCard(link, src, title, descr)
+//	a(href=link).card-item
+//		img.card-item__img(src=src alt='foto-1')
+//		h2.card-item__title=title
+//		p.card-item__descr=descr
+
+mixin link-blank(href)
+	a(herf=href rel="nofollow" target="_blank")
+
+
+mixin svg(icon)
+	svg(class="icon--" + icon + ""  role="presentation")&attributes(attributes)
+		use(xlink:href="#icon-" + icon + "")
+
+
+mixin iconNum(types, color, num)
+	div(class='info__icon icon-'+ types +'-wrap')
+		+svg('icon-'+types)(class='icon-'+ types+'-' + color)
+		span.info__number= num
+
+mixin img(src)
+	img(src='/wp-content/themes/pokrovsky/assets/images/'+src+'' alt="foto")&attributes(attributes)
+
+mixin RangeSlider(options)
+	each option, index in options
+		li.range-item.filter__item.js-range-item
+			h4.range-item__label.filter__label #{option.label}
+			input.js-range-init(id=option.id type="hidden" data-from=option.from data-min=option.min data-to=option.to data-max=option.max)
+			.u-range-item-nav
+				input(id=option.id+"_min" class="js_"+option.id+"_min js-current-min" name=option.id+"_min" maxlength=option.max type="number" min=option.min value=option.min max=option.max)
+				input(id=option.id+"_max" class="js_"+option.id+"_max js-current-max" name=option.id+"_max" maxlength=option.max type="number" min=option.min value=option.max max=option.max)

@@ -1,0 +1,45 @@
+extends ../layout/main
+block variable
+block meta
+	title= 'Home'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="/wp-content/themes/search/assets/styles/main.min.css")
+		//link(rel='stylesheet', href="/wp-content/themes/search/static/base.css")
+block scripts
+	script(src='/wp-content/themes/search/assets/scripts/libs.js')
+	//script(src='/wp-content/themes/search/assets/scripts/scroll.js')
+	script(src='/wp-content/themes/search/assets/scripts/index.js')
+
+block content
+	section.main
+		.js-search-start.my-search-start
+			img(src='/wp-content/themes/search/assets/images/Search.svg').my-search-start-icon
+		.my-search.js-search
+			.my-search__close.js-search__close
+			.my-search__block
+				label.my-search__label
+					input(type="text" placeholder="пошук").js-search__text.my-search__text
+				img(src='/wp-content/themes/search/assets/images/microphone.svg').js-search__micro.my-search__icon.active
+				svg( width="30" height="47" viewBox="0 0 30 47" fill="none" xmlns="http://www.w3.org/2000/svg").js-search__micro-end.my-search__icon.my-search__icon-audio
+					line( x1="1" y1="46" x2="1" y2="17" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="5" y1="46" x2="5" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="9" y1="46" x2="9" y2="29" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="13" y1="46" x2="13" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="17" y1="46" x2="17" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="21" y1="46" x2="21" y2="10" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="25" y1="46" x2="25" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+					line( x1="29" y1="46" x2="29" y2="40" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
+				.my-search__description Натисніть Enter для пошуку або ESC, щоб закрити
+			.my-search__result.js-search__result(data-empty='Ничего не Найденно')
+				a(href='')
+				a(href='')
+				a(href='')
+block footer
+	footer.footer.footer-index
+		include ../includes/footer
+
+block header
+	header.header.header-index
+		include ../includes/header.pug
+

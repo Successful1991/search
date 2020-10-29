@@ -1,0 +1,11 @@
+/**/.DS_Store
+/**/_backstage
+/**/Thumbs.db
+/.git/
+/node_modules/
+/.idea/
+/yarn.lock
+/package-lock.json
+/prod/
+/dist/
+/wp-content/

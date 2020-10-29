@@ -1,0 +1,167 @@
+.footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  	display: flex;
+	width: 100%;
+	align-items: flex-end;
+	padding: 0 50px 50px;
+	margin: auto 0 0 0;
+	z-index: 202;
+	font-size: 0.735vw;
+	background: transparent;
+	pointer-events: none;
+	&__smarto{
+		display: flex;
+		align-items: center;
+		pointer-events: painted;
+		svg{
+			width: min(vw(70), 70px);
+			height: min(vw(28), 28px);
+			pointer-events: painted;
+		}
+	}
+	&__logo{
+		width: min(vw(312), 312px);
+		//width: 312px;
+		height: min(vw(243), 243px);
+		//height: 243px;
+		pointer-events: painted;
+		cursor: pointer;
+	}
+	&__developer{
+		width: min(vw(273), 273px);
+		//width: 273px;
+		height: min(vw(60), 60px);
+		//height: 60px;
+		margin: 0 50px 0 auto;
+		pointer-events: painted;
+	}
+	&__middle{
+		.footer{
+			&__logo{
+				width: min(vw(117), 117px);
+				height: min(vw(91), 91px);
+			}
+			&__developer{
+				width: min(vw(273), 273px);
+				height: min(vw(60), 60px);
+				//width: 273px;
+				//height: 60px;
+			}
+		}
+	}
+	&__small{
+		.footer{
+			&__logo{
+				width: min(vw(117), 117px);
+				height: min(vw(91), 91px);
+			}
+			&__developer{
+				width: min(vw(129), 129px);
+				height: min(vw(28), 28px);
+			}
+		}
+	}
+}
+@media screen and (max-width: 1440px){
+	.footer__middle,.footer__small{
+		.footer{
+			&__logo{
+				width: 130px;
+				height: 101px;
+			}
+			&__developer{
+				width: 143px;
+				height: 31px;
+				margin: 0 20px 0 auto;
+			}
+			&__smarto{
+				svg{
+					width: 59px;
+					height: 24px;
+				}
+			}
+		}
+	}
+	.footer{
+		&__logo{
+			width: 130px;
+			height: 101px;
+		}
+		&__developer{
+			width: 143px;
+			height: 31px;
+			margin: 0 20px 0 auto;
+		}
+		&__smarto{
+			svg{
+				width: 59px;
+				height: 24px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1023px){
+	.footer__middle,.footer__small{
+		.footer__logo{
+			width: 100px;
+			height: 78px;
+		}
+		&__developer{
+			width: 174px;
+			height: 38px;
+		}
+	}
+	.footer{
+		padding: 0 20px 20px;
+		&__logo{
+			width: 100px;
+			height: 78px;
+		}
+		&__developer{
+			width: 174px;
+			height: 38px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px){
+	.footer__middle,.footer__small{
+		.footer__logo{
+			width: 92px;
+			height: 72px;
+		}
+		.footer__developer{
+			width: 117px;
+			height: 25px;
+			margin: 0 15px 0 auto;
+		}
+		.footer__smarto{
+			svg{
+				width: 59px;
+				height: 24px;
+			}
+		}
+	}
+	.footer{
+		//position: fixed;
+		padding: 0 15px 20px;
+		&__logo{
+			width: 92px;
+			height: 72px;
+		}
+		&__developer{
+			width: 117px;
+			height: 25px;
+			margin: 0 15px 0 auto;
+		}
+		&__smarto{
+			svg{
+				width: 59px;
+				height: 24px;
+			}
+		}
+	}
+}

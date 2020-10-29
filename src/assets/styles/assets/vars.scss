@@ -1,0 +1,65 @@
+$default-font: "Mont",
+sans-serif;
+$default-font2: "Mont",
+sans-serif;
+$mc: #b6b3b0;
+
+//
+//$text: #ffffff;
+//$text-light-1: #F3EDEC;
+//$text-light-2: #D8DFDF;
+//$text-dark: #C2A7A1;
+//$text-dark-2:#7A7979;
+//$text-dark-3:#5B5A5A;
+//$text-black: #323131;
+
+//$mc1: #C2A7A1;
+//$mc2: #323131;
+//$mc3: #3B5F60;
+//$mc4: #ABB2B2;
+//$mc5: #292929;
+//
+$wc: #ffffff;
+$bc: #000;
+//
+//$padding-wrap: 96px;
+//$padding-wrap--small: 20px;
+
+
+//$--bg : #71A461;
+//$--bg-opacity : rgba(113,164,97, 0.6);
+//
+
+
+
+body{
+  --header-height: 100px;
+  --breadcrumb-height: 25px;
+  --breadcrumb-marg: 150px;
+  --breadcrumb-offset: var(--breadcrumb-height) + var(--breadcrumb-marg);
+  --title-height: 70px;
+  --title-marg: 20px;
+  --title-offset: var(--title-height) + var(--title-marg);
+  --mrgn-button: 55px;
+}
+  @media screen and (max-width: 1440px){
+    body{
+      --header-height: 95px;
+      --mrgn-button: 35px;
+      --breadcrumb-height: 15px;
+      --breadcrumb-marg: 115px;
+      --title-marg: 10px;
+      --title-height: 36px;
+    }
+  }
+  @media screen and (max-width: 1023px){
+    body{
+      --header-height: 85px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    body{
+      --breadcrumb-marg: 90px;
+      --header-height: 70px;
+    }
+  }
