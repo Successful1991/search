@@ -4,12 +4,12 @@ block meta
 	title= 'Home'
 	meta(name='description', content='')
 block head
-		link(rel='stylesheet', href="/wp-content/themes/search/assets/styles/main.min.css")
+		link(rel='stylesheet', href="/wp-content/themes/search/assets/styles/search.css")
 		//link(rel='stylesheet', href="/wp-content/themes/search/static/base.css")
 block scripts
 	script(src='/wp-content/themes/search/assets/scripts/libs.js')
 	//script(src='/wp-content/themes/search/assets/scripts/scroll.js')
-	script(src='/wp-content/themes/search/assets/scripts/index.js')
+	script(src='/wp-content/themes/search/assets/scripts/search.js')
 
 block content
 	section.main
@@ -32,9 +32,6 @@ block content
 					line( x1="29" y1="46" x2="29" y2="40" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round")
 				.my-search__description Натисніть Enter для пошуку або ESC, щоб закрити
 			.my-search__result.js-search__result(data-empty='Ничего не Найденно')
-				a(href='')
-				a(href='')
-				a(href='')
 block footer
 	footer.footer.footer-index
 		include ../includes/footer

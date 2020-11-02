@@ -10,8 +10,13 @@
   background: rgba(0, 61, 166, 0.9);
   visibility: hidden;
   opacity: 0;
+  z-index: 9999999;
   pointer-events: none;
   transition: opacity 0.5s ease-in;
+  box-sizing: border-box;
+  *{
+    box-sizing: border-box;
+  }
   &__active{
     visibility: visible;
     opacity: 1;
@@ -23,6 +28,7 @@
     width: 30px;
     margin: 0 0 0 auto;
     cursor: pointer;
+
     &:after,&:before{
       content: "";
       position: absolute;
@@ -43,31 +49,40 @@
   &__block{
     position: relative;
     display: flex;
-    //width: 100%;
-    //height: 96px;
-    //flex: 1 1 100%;
+    align-content: center;
+    align-items: center;
+    flex: 0 0 auto;
     margin: 40px 80px 15%;
     border-bottom: 2px solid #EBF2FD;
   }
   &__label{
-
-
-
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
   }
+
   &__text{
     background: transparent;
     border: none;
-    font-family: "PF Din Text Universal";
+    font-family: "PFDinTextUniversal-Light";
     font-weight: 300;
     font-size: 96px;
     color: #EBF2FD;
     line-height: 1em;
+    width: 100%;
+    height: 100%;
     &::placeholder{
-      font-family: "PF Din Text Universal";
+      font-family: "PFDinTextUniversal-Light";
       font-weight: 300;
       font-size: 96px;
       line-height: 1em;
       color: #2361C2;
+    }
+    &:focus{
+      border: none;
+      outline: none;
     }
   }
   &__icon{
@@ -75,7 +90,7 @@
     top: 50%;
     right: 0;
     transform: translate(0 , -50%);
-    display: block;
+    display: none;
     width: initial;
     height: 47px;
     visibility: hidden;
@@ -105,11 +120,10 @@
     right: 0;
     transform: translate(0, 100%);
     padding: 10px 0;
-    font-family: "PF Din Text Universal";
-    font-weight: normal;
     font-size: 16px;
     line-height: 26px;
     color: #EBF2FD;
+    text-align: right;
   }
   &__result{
     display: flex;
@@ -119,8 +133,6 @@
     flex: 1 1 100%;
     overflow: auto;
     &-empty{
-      font-family: "PF Din Text Universal";
-      font-weight: normal;
       font-size: 24px;
       line-height: 38px;
       color: #EBF2FD;
@@ -133,8 +145,6 @@
       padding: 0 20px 0 0;
     }
     a{
-      font-family: "PF Din Text Universal";
-      font-weight: normal;
       font-size: 24px;
       line-height: 1em;
       text-decoration-line: none;
@@ -143,8 +153,6 @@
       border-bottom: 2px solid #EBF2FD;
     }
     span{
-      font-family: "PF Din Text Universal";
-      font-weight: normal;
       font-size: 16px;
       line-height: 26px;
       text-align: right;
@@ -152,9 +160,15 @@
     }
   }
   &-start{
-    height: 24px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
     width: 24px;
     cursor: pointer;
+    z-index: 6678;
+    margin: 0 10px 0 30px;
     &-icon{
       height: 24px;
       width: 24px;
@@ -166,5 +180,132 @@
 @keyframes audio {
   to{
     transform: scaleY(0);
+  }
+}
+
+@media screen and(max-width: 1024px){
+  .my-search{
+    padding: 20px;
+    &__close{
+      height: 25px;
+      width: 25px;
+      margin: 0 0 0 auto;
+      &:after,&:before{
+        width: 20px;
+        height: 2px;
+      }
+    }
+    &__block{
+      margin: 30px 40px 10%;
+      border-bottom: 2px solid #EBF2FD;
+    }
+    &__text{
+      font-size: 78px;
+      &::placeholder{
+        font-size: 78px;
+      }
+    }
+    &__icon{
+      height: 36px;
+      svg{
+        height: 36px;
+      }
+    }
+    &__description{
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__result{
+      margin: 0 0 40px;
+      padding: 0 40px;
+      &-empty{
+        font-size: 20px;
+        line-height: 32px;
+      }
+      &-elem{
+        padding: 0 15px 0 0;
+      }
+      a{
+        font-size: 20px;
+        margin: 0 auto 15px 0;
+      }
+      span{
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    &-start{
+      height: 48px;
+      width: 20px;
+      margin: 0 20px 0 25px;
+      &-icon{
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+@media screen and(max-width: 767px){
+  .my-search{
+    &__close{
+      height: 20px;
+      width: 20px;
+    }
+    &__block{
+      height: 52px;
+      margin: 30px 0 50px;
+      border-bottom: 1px solid #EBF2FD;
+    }
+    &__text{
+      font-size: 36px;
+      line-height: 1.4em;
+      &::placeholder{
+        font-size: 36px;
+      }
+    }
+    &__icon{
+      height: 25px;
+      svg{
+        height: 25px;
+      }
+    }
+    &__description{
+      display: none;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &__result{
+      margin: 0 0 30px;
+      padding: 0;
+      &-empty{
+        font-size: 20px;
+        line-height: 32px;
+      }
+      &-elem{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 ;
+        margin-bottom: 15px;
+      }
+      a{
+        font-size: 16px;
+        margin: 0 0 5px;
+        border-bottom: 1px solid #EBF2FD;
+      }
+      span{
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+    &-start{
+      height: 44px;
+      width: 20px;
+      margin: 0 0 0 15px;
+      &-icon{
+        height: 20px;
+        width: 20px;
+      }
+    }
   }
 }

@@ -130,7 +130,7 @@ function styles() {
     	}))
 		.pipe(autoprefixer({cascade: false}))
 		.pipe(sourcemaps.write())
-    	.pipe(rename("main.min.css"))
+    	.pipe(rename("search.css"))
     	.pipe(gulp.dest(paths.styles.dest))
 
 }

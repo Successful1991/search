@@ -1,0 +1,422 @@
+[
+        {
+            "request": "one-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "one-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "buy one-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "buy a one-room apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "one-room layouts",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "layouts of one-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/odnokomnatnaya/",
+            "category": "1 комнатные"
+        },
+        {
+            "request": "two-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "two-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "buy a two-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "buy a two-room apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "two-room layouts",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "layouts of two-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/dvuhkomnatnaya/",
+            "category": "2 комнатные"
+        },
+        {
+            "request": "three-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "three-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "buy a three-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "buy a three-room apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "three-room layouts",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "layouts of three-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/trehkomnatnaya/",
+            "category": "3 комнатные"
+        },
+        {
+            "request": "four-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "four-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "buy a four-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "buy a four-room apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "layouts of four-room",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "layouts of four-room apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/chetirehkomnatnaya/",
+            "category": "4 комнатные"
+        },
+        {
+            "request": "location",
+            "link": "https://rybalsky.com.ua/en/adress/",
+            "category": "расположение"
+        },
+        {
+            "request": "address",
+            "link": "https://rybalsky.com.ua/en/adress/",
+            "category": "расположение"
+        },
+        {
+            "request": "air flight",
+            "link": "https://rybalsky.com.ua/en/aerial-flight/",
+            "category": "аэрооблет"
+        },
+        {
+            "request": "webcam",
+            "link": "https://rybalsky.com.ua/en/webcam/",
+            "category": "веб камера"
+        },
+        {
+            "request": "virtual showroom",
+            "link": "https://rybalsky.com.ua/en/show-rooms/",
+            "category": "виртуальный шоурум"
+        },
+        {
+            "request": "showroom",
+            "link": "https://rybalsky.com.ua/en/show-rooms/",
+            "category": "виртуальный шоурум"
+        },
+        {
+            "request": "documents",
+            "link": "https://rybalsky.com.ua/en/documents/",
+            "category": "документы"
+        },
+        {
+            "request": "general plan",
+            "link": "https://rybalsky.com.ua/en/documents/",
+            "category": "документы"
+        },
+        {
+            "request": "paw plungers",
+            "link": "https://rybalsky.com.ua/en/animal-space/",
+            "category": "пространство для животных"
+        },
+        {
+            "request": "space for animals",
+            "link": "https://rybalsky.com.ua/en/animal-space/",
+            "category": "пространство для животных"
+        },
+        {
+            "request": "developer",
+            "link": "https://rybalsky.com.ua/en/partners/",
+            "category": "застройщик"
+        },
+        {
+            "request": "infrastructure",
+            "link": "https://rybalsky.com.ua/en/infrastructure/",
+            "category": "инфраструктура"
+        },
+        {
+            "request": "apartments with best views",
+            "link": "https://rybalsky.com.ua/en/vidovaya/",
+            "category": "видовые квартиры"
+        },
+        {
+            "request": "apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "buy an apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "sale of apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "prices",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "price",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "how much is the apartment",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "cost of apartments",
+            "link": "https://rybalsky.com.ua/en/kvartira/",
+            "category": "купить квартиру"
+        },
+        {
+            "request": "commercial property",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "commercial premises",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "commercial space",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "commercial real estate",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "buy commercial property",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "buy commercial premises",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "buy commercial space",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "buy commercial real estate",
+            "link": "https://rybalsky.com.ua/en/kommercheskaya/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "rent of commercial premises",
+            "link": "https://rybalsky.com.ua/en/commercial-lease/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "rent of commercial property",
+            "link": "https://rybalsky.com.ua/en/commercial-lease/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "rent of commercial space",
+            "link": "https://rybalsky.com.ua/en/commercial-lease/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "rent of commercial real estate",
+            "link": "https://rybalsky.com.ua/en/commercial-lease/",
+            "category": "коммерческая недвижимость"
+        },
+        {
+            "request": "shares",
+            "link": "https://rybalsky.com.ua/en/news/",
+            "category": "новости"
+        },
+        {
+            "request": "news",
+            "link": "https://rybalsky.com.ua/en/news/",
+            "category": "новости"
+        },
+        {
+            "request": "sales department",
+            "link": "https://rybalsky.com.ua/en/callback/",
+            "category": "отдел продаж"
+        },
+        {
+            "request": "working hours",
+            "link": "https://rybalsky.com.ua/en/callback/",
+            "category": "отдел продаж"
+        },
+        {
+            "request": "contacts",
+            "link": "https://rybalsky.com.ua/en/callback/",
+            "category": "отдел продаж"
+        },
+        {
+            "request": "phone",
+            "link": "https://rybalsky.com.ua/en/callback/",
+            "category": "отдел продаж"
+        },
+        {
+            "request": "office space",
+            "link": "https://rybalsky.com.ua/en/office/",
+            "category": "офисные помещения"
+        },
+        {
+            "request": "buy office space",
+            "link": "https://rybalsky.com.ua/en/office/",
+            "category": "офисные помещения"
+        },
+        {
+            "request": "office space rental",
+            "link": "https://rybalsky.com.ua/en/office/",
+            "category": "офисные помещения"
+        },
+        {
+            "request": "office rent",
+            "link": "https://rybalsky.com.ua/en/office/",
+            "category": "офисные помещения"
+        },
+        {
+            "request": "buy office",
+            "link": "https://rybalsky.com.ua/en/office/",
+            "category": "офисные помещения"
+        },
+        {
+            "request": "underground parking",
+            "link": "https://rybalsky.com.ua/en/parking/",
+            "category": "подземный паркинг"
+        },
+        {
+            "request": "parking",
+            "link": "https://rybalsky.com.ua/en/parking/",
+            "category": "подземный паркинг"
+        },
+        {
+            "request": "parking",
+            "link": "https://rybalsky.com.ua/en/parking/",
+            "category": "подземный паркинг"
+        },
+        {
+            "request": "layouts",
+            "link": "https://rybalsky.com.ua/en/top-planirovok/",
+            "category": "планировки квартир"
+        },
+        {
+            "request": "apartment layouts",
+            "link": "https://rybalsky.com.ua/en/top-planirovok/",
+            "category": "планировки квартир"
+        },
+        {
+            "request": "installment plan",
+            "link": "https://rybalsky.com.ua/en/rassrochka/",
+            "category": "рассрочка"
+        },
+        {
+            "request": "credit",
+            "link": "https://rybalsky.com.ua/en/rassrochka/",
+            "category": "рассрочка"
+        },
+        {
+            "request": "retail space",
+            "link": "https://rybalsky.com.ua/en/trading/",
+            "category": "торговые помещения"
+        },
+        {
+            "request": "buy a retail space",
+            "link": "https://rybalsky.com.ua/en/trading/",
+            "category": "торговые помещения"
+        },
+        {
+            "request": "rental of retail space",
+            "link": "https://rybalsky.com.ua/en/trading/",
+            "category": "торговые помещения"
+        },
+        {
+            "request": "photo",
+            "link": "https://rybalsky.com.ua/en/gallery/",
+            "category": "галерея"
+        },
+        {
+            "request": "gallery",
+            "link": "https://rybalsky.com.ua/en/gallery/",
+            "category": "галерея"
+        },
+        {
+            "request": "construction progress",
+            "link": "https://rybalsky.com.ua/en/hod-stroitelstva/",
+            "category": "ход строительства"
+        },
+        {
+            "request": "school",
+            "link": "https://rybalsky.com.ua/en/childrens/",
+            "category": "пространство для детей"
+        },
+        {
+            "request": "kindergarten",
+            "link": "https://rybalsky.com.ua/en/childrens/",
+            "category": "пространство для детей"
+        },
+        {
+            "request": "family port",
+            "link": "https://rybalsky.com.ua/en/childrens/",
+            "category": "пространство для детей"
+        },
+        {
+            "request": "restoport",
+            "link": "https://rybalsky.com.ua/en/resto-port/",
+            "category": "restoport"
+        }
+]
