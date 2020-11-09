@@ -4,9 +4,14 @@ function init() {
         ru: "ru-RU",
         en: "en-US"
     };
+    const separatorsForSearch = [',', ' ', ';']
 
     const lang = document.querySelector("html").lang;
     const langName = langList[lang];
+    const objRegByLang = {
+        uk: /([аоуеиі])+$/gim,
+        'ru-RU': /([аеийоуэыюяую])+$/gim
+    }
     // sliders init start
     let requireList = [];
 
@@ -30,6 +35,7 @@ function init() {
 
         microphoneIconEnd.addEventListener('click', function() {
             recognition.stop();
+            
             microphoneIconEnd.classList.remove('active');
             microphoneIcon.classList.add('active');
         });
@@ -74,8 +80,6 @@ function init() {
         }
     })
 
-
-
     document.querySelector('.js-search__text').addEventListener('input',function (ev) {
         resultWrap.innerHTML = '';
         if(this.value.length < 3) return
@@ -83,20 +87,53 @@ function init() {
         search(this.value)
     })
 
+    function strToArr(str) {
+        const separator = separatorsForSearch.find(sep => {
+            if(str.includes(sep)) {
+                return sep
+            }
+        })
+
+        if(!separator) {
+            return str
+        }
+
+       return str.split(separator)
+    }
+
     function checkResult(speechResult) {
+        speechResult = strToArr(speechResult)
         let result = [];
-        for(element in requireList){
-            if ( requireList[element].request.toLowerCase().includes(speechResult.toLowerCase()) ) {
-                result.push({
-                    link:requireList[element].link,
-                    text: requireList[element].request,
-                    category: requireList[element].category
-                });
+
+        if(Array.isArray(speechResult)) {
+            speechResult.forEach(res => {
+                res = res.replace(objRegByLang[langName], '')
+                for(element in requireList) {
+                    if ( requireList[element].request.toLowerCase().includes(res.toLowerCase()) ) {
+                        result.push({
+                            link:requireList[element].link,
+                            text: requireList[element].request,
+                            category: requireList[element].category
+                        });
+                    }
+                }
+            })
+        } else {
+            for(element in requireList) {
+
+               speechResult = speechResult.replace(objRegByLang[langName], '')
+
+                if ( requireList[element].request.toLowerCase().includes(speechResult.toLowerCase()) ) {
+                    result.push({
+                        link:requireList[element].link,
+                        text: requireList[element].request,
+                        category: requireList[element].category
+                    });
+                }
             }
         }
         return (result.length) ? result: null;
     }
-
 
     function getList(url) {
         const rawFile = new XMLHttpRequest();
