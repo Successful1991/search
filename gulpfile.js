@@ -11,9 +11,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 // webpack
-const gulpWebpack = require('gulp-webpack');
-const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.js');
+// const gulpWebpack = require('gulp-webpack');
+// const webpack = require('webpack');
+// const webpackConfig = require('./webpack.config2.js');
 //js
 const importFile = require('gulp-file-include');
 const uglify = require('gulp-uglify');
@@ -37,11 +37,11 @@ const paths = {
         src: './src/assets/styles/**/*.scss',
         dest: 'wp-content/themes/search/assets/styles'
     },
-    scripts: {
-        src: './src/assets/scripts/index-app.js',
-        watch: './src/assets/scripts/*.js',
-        dest: 'wp-content/themes/search/assets/scripts/libs'
-    },
+    // scripts: {
+    //     src: './src/assets/scripts/index-app.js',
+    //     watch: './src/assets/scripts/*.js',
+    //     dest: 'wp-content/themes/search/assets/scripts/libs'
+    // },
     fonts: {
         src: './src/assets/fonts/**/*',
         dest: 'wp-content/themes/search/assets/fonts'
@@ -180,15 +180,15 @@ function clear() {
 // });
 
 // webpack
-function scripts() {
-    return gulp.src(paths.scripts.src)
-		.pipe(sourcemaps.init({
-			loadMaps: true
-		}))
-        .pipe(gulpWebpack(webpackConfig, webpack))
-		.pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.scripts.dest));
-}
+// function scripts() {
+//     return gulp.src(paths.scripts.src)
+// 		.pipe(sourcemaps.init({
+// 			loadMaps: true
+// 		}))
+//     .pipe(gulpWebpack(webpackConfig, webpack))
+// 		.pipe(sourcemaps.write())
+//         .pipe(gulp.dest(paths.scripts.dest));
+// }
 
 // function scripts3d() {
 //     return gulp.src(paths.scripts3d.src)
@@ -227,7 +227,7 @@ function libs() {
 
 exports.templates = templates;
 exports.styles = styles;
-exports.scripts = scripts;
+// exports.scripts = scripts;
 // exports.scripts3d = scripts3d;
 exports.gulpModules = gulpModules;
 exports.images = images;
