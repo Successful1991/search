@@ -4,17 +4,18 @@ function init() {
         ru: "ru-RU",
         en: "en-US"
     };
-    const separatorsForSearch = [',', ' ', ';']
+    // const separatorsForSearch = [',', ' ', ';']
 
     const lang = document.querySelector("html").lang;
     const langName = langList[lang];
     const objRegByLang = {
         uk: /([аоуеиі])+$/gim,
-        'ru-RU': /([аеийоуэыюяую])+$/gim
+        ru: /([аеийоуэыюяуюь])+$/gim
     }
     // sliders init start
     let requireList = [];
 
+    // getList('/static/list_'+ lang +'.json')
     getList('wp-content/themes/search/static/list_'+ lang +'.json')
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -58,7 +59,6 @@ function init() {
 
     }
 
-
     // speechRecognitionList.addFromString(grammar, 1);
 
     const resultWrap = document.querySelector('.js-search__result');
@@ -87,43 +87,12 @@ function init() {
         search(this.value)
     })
 
-    function strToArr(str) {
-        const separator = separatorsForSearch.find(sep => {
-            if(str.includes(sep)) {
-                return sep
-            }
-        })
-
-        if(!separator) {
-            return str
-        }
-
-       return str.split(separator)
-    }
-
     function checkResult(speechResult) {
-        speechResult = strToArr(speechResult)
+        const regex = new RegExp(/[\s;,]+/g);
+        speechResult = speechResult.trim().split(regex)
         let result = [];
-
-        if(Array.isArray(speechResult)) {
-            speechResult.forEach(res => {
-                res = res.replace(objRegByLang[langName], '')
-                for(element in requireList) {
-                    if ( requireList[element].request.toLowerCase().includes(res.toLowerCase()) ) {
-                        result.push({
-                            link:requireList[element].link,
-                            text: requireList[element].request,
-                            category: requireList[element].category
-                        });
-                    }
-                }
-            })
-        } else {
             for(element in requireList) {
-
-               speechResult = speechResult.replace(objRegByLang[langName], '')
-
-                if ( requireList[element].request.toLowerCase().includes(speechResult.toLowerCase()) ) {
+                if( speechResult.every(el => requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ) ) {
                     result.push({
                         link:requireList[element].link,
                         text: requireList[element].request,
@@ -131,7 +100,7 @@ function init() {
                     });
                 }
             }
-        }
+
         return (result.length) ? result: null;
     }
 
@@ -164,11 +133,6 @@ function init() {
         resultWrap.innerHTML = setResult(checkResult(text))
     }
 }
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded',function () {
     init();
