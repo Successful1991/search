@@ -14,9 +14,9 @@ function init() {
     }
     // sliders init start
     let requireList = [];
-
-    // getList('/static/list_'+ lang +'.json')
-    getList('wp-content/themes/search/static/list_'+ lang +'.json')
+    $(`.js-my-search__lang-button [data-lang=${lang}]`).addClass('active')
+    getList('/static/list_'+ lang +'.json')
+    // getList('wp-content/themes/search/static/list_'+ lang +'.json')
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList;
@@ -57,10 +57,16 @@ function init() {
             microphoneIcon.classList.add('active');
         };
 
+        recognition.onerror = function (event) {
+            $('.js-my-search__help-micro').addClass('my-active')
+            new SpeechRecognition();
+        }
     }
 
     // speechRecognitionList.addFromString(grammar, 1);
-
+    $('.js-my-search__help-micro--close').on('click', function () {
+        $('.js-my-search__help-micro').removeClass('my-active')
+    })
     const resultWrap = document.querySelector('.js-search__result');
 
     document.querySelector(".js-search__close").addEventListener('click', function () {
@@ -87,16 +93,55 @@ function init() {
         search(this.value)
     })
 
+    $('.js-my-search__lang-button').on('click', 'button', function () {
+        const newLang = this.dataset.lang
+        $('.js-my-search__lang-button .active').removeClass('active')
+        this.classList.add('active')
+        // getList('wp-content/themes/search/static/list_'+ newLang +'.json', () => {
+        getList('/static/list_'+ newLang +'.json', () => {
+            search( $('.js-search__text')[0].value)
+        })
+
+    })
+
     function checkResult(speechResult) {
         const regex = new RegExp(/[\s;,]+/g);
-        speechResult = speechResult.trim().split(regex)
+        speechResult = speechResult.trim().split(regex).filter(el => { if(el.length > 2) return el})
         let result = [];
-            for(element in requireList) {
-                if( speechResult.every(el => requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ) ) {
+
+            for(let element in requireList) {
+                // if( speechResult.every(el => requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ) ) {
+                //     result.push({
+                //         link:requireList[element].link,
+                //         text: requireList[element].request,
+                //         category: requireList[element].category
+                //     });
+                // }
+
+                // const add = speechResult.some(el => {
+                //     if( requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ){
+                //         console.log('index++', requireList[element].request )
+                //
+                //         index++
+                //         return true
+                //     }
+                //     return false
+                // })
+                let index = 0
+                let add = false
+                speechResult.forEach(el => {
+                    if( requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ){
+                        index++
+                        add = true
+                    }
+                })
+
+                if( add ) {
                     result.push({
                         link:requireList[element].link,
                         text: requireList[element].request,
-                        category: requireList[element].category
+                        category: requireList[element].category,
+                        index: index === speechResult.length ? 1 : 2
                     });
                 }
             }
@@ -104,12 +149,13 @@ function init() {
         return (result.length) ? result: null;
     }
 
-    function getList(url) {
+    function getList(url, callback = () => {}) {
         const rawFile = new XMLHttpRequest();
         rawFile.open("GET", url, false);
         rawFile.onreadystatechange = function () {
             if(rawFile.readyState === 4 && (rawFile.status === 200 || rawFile.status == 0)) {
                  requireList = JSON.parse(rawFile.responseText);
+                callback()
             }
         }
         rawFile.send(null);
@@ -124,7 +170,7 @@ function init() {
         }
 
         return result.reduce((previous, current) => {
-            return `${previous} <div class="my-search__result-elem"><a href="${current.link}">${current.text}</a><span>${current.category}</span></div>`
+            return `${previous} <div class="my-search__result-elem" style="order: ${current.index}"><a href="${current.link}">${current.text}</a><span>${current.category}</span></div>`
         },``)
     }
 

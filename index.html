@@ -4,7 +4,7 @@
 <!--		img.card-item__img(src=src alt='foto-1')-->
 <!--		h2.card-item__title=title-->
 <!--		p.card-item__descr=descr--><!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,25 +48,56 @@
     <header class="header header-index"></header>
     <section class="main">
       <div class="js-search-start my-search-start"><img class="my-search-start-icon" src="/wp-content/themes/search/assets/images/Search.svg"></div>
-      <div class="my-search js-search">
-        <div class="my-search__close js-search__close"></div>
-        <div class="my-search__block">
-          <label class="my-search__label">
-            <input class="js-search__text my-search__text" type="text" placeholder="пошук">
-          </label><img class="js-search__micro my-search__icon active" src="/wp-content/themes/search/assets/images/microphone.svg">
-          <svg class="js-search__micro-end my-search__icon my-search__icon-audio" width="30" height="47" viewBox="0 0 30 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="1" y1="46" x2="1" y2="17" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="5" y1="46" x2="5" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="9" y1="46" x2="9" y2="29" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="13" y1="46" x2="13" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="17" y1="46" x2="17" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="21" y1="46" x2="21" y2="10" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="25" y1="46" x2="25" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-            <line x1="29" y1="46" x2="29" y2="40" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
-          </svg>
-          <div class="my-search__description">Натисніть Enter для пошуку або ESC, щоб закрити</div>
+      <div class="my-search-wrap js-search">
+        <div class="my-search">
+          <div class="my-search__test">Пошук працює у тестовому режимі</div>
+          <div class="my-search__lang">
+            <div class="my-search__lang-img">
+              <svg viewBox="0 0 33 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.5588 25.0639C29.5294 31.36 24.5588 36.5716 18.2059 37.3549V17.3821H29.1765V13.8876H18.2059V9.88097C20.2353 9.1881 21.6765 7.29023 21.6765 5.09111C21.6765 2.28949 19.3529 0 16.5 0C13.6471 0 11.3235 2.28949 11.3235 5.09111C11.3235 7.32035 12.7941 9.1881 14.7941 9.88097V13.8876H3.82353V17.3821H14.7941V37.3549C8.41177 36.5415 3.47059 31.36 3.41176 25.0639L0 25.094C0.0588235 33.8604 7.44118 41 16.5 41C25.5588 41 32.9412 33.8604 33 25.094L29.5588 25.0639ZM16.5 3.10286C17.6765 3.10286 18.6471 3.97649 18.6471 5.06098C18.6471 6.14548 17.6765 7.0191 16.5 7.0191C15.3235 7.0191 14.3529 6.14548 14.3529 5.06098C14.3529 4.00661 15.2941 3.10286 16.5 3.10286Z" fill="white"></path>
+              </svg>
+            </div>
+            <div class="my-search__lang-title">Оберіть мову пошуку:</div>
+            <div class="my-search__lang-button-wrap js-my-search__lang-button">
+              <button class="my-search__lang-button" type="button" data-lang="uk">Українська</button>
+              <button class="my-search__lang-button" type="button" data-lang="ru">Русский</button>
+              <button class="my-search__lang-button" type="button" data-lang="en">English</button>
+            </div>
+          </div>
+          <div class="my-search__close js-search__close"></div>
+          <div class="my-search__block">
+            <label class="my-search__label">
+              <input class="js-search__text my-search__text" type="text" placeholder="пошук">
+            </label>
+            <div class="js-search__micro my-search__icon active"><img src="/wp-content/themes/search/assets/images/microphone.svg">
+              <div class="my-search__icon-shadow my-search__icon-shadow-1"></div>
+              <div class="my-search__icon-shadow my-search__icon-shadow-2"></div>
+              <div class="my-search__icon-shadow my-search__icon-shadow-3"></div>
+            </div>
+            <svg class="js-search__micro-end my-search__icon my-search__icon-audio" width="30" height="47" viewBox="0 0 30 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1" y1="46" x2="1" y2="17" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="5" y1="46" x2="5" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="9" y1="46" x2="9" y2="29" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="13" y1="46" x2="13" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="17" y1="46" x2="17" y2="23" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="21" y1="46" x2="21" y2="10" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="25" y1="46" x2="25" y2="1" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+              <line x1="29" y1="46" x2="29" y2="40" stroke="#EBF2FD" stroke-width="2" stroke-linecap="round"></line>
+            </svg>
+            <div class="my-search__description">Натисніть Enter для пошуку або ESC, щоб закрити</div>
+            <div class="my-search__help-micro js-my-search__help-micro">
+              <div class="my-search__help-micro--close js-my-search__help-micro--close"></div>
+              <div class="my-search__help-micro--title">Увімкніть або дайте доступ</div>
+              <div class="my-search__help-micro--text">своєму аудіопристрою для <br>голосового пошуку!</div>
+              <div class="my-search__help-micro--img">
+                <svg width="26" height="33" viewBox="0 0 26 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.656 13.4904H3.51248V11.6778H11.656H12.156V11.1778V7.95298V7.59954L11.8228 7.48162C10.4366 6.99105 9.42157 5.66966 9.42157 4.09772C9.42157 2.1164 11.0309 0.5 13 0.5C14.9691 0.5 16.5784 2.1164 16.5784 4.09772C16.5784 5.65042 15.5819 6.99168 14.1794 7.48087L13.844 7.59783V7.95298V11.1778V11.6778H14.344H22.4875V13.4904H14.344H13.844V13.9904V30.0661V30.6331L14.4065 30.5622C19.4823 29.9229 23.5033 25.7812 23.7743 20.6778L25.4867 20.6931C25.1792 27.2408 19.6968 32.5 13 32.5C6.30315 32.5 0.820746 27.2408 0.513317 20.693L2.20458 20.6778C2.4953 25.7796 6.4947 29.8984 11.5914 30.5619L12.156 30.6354V30.0661V13.9904V13.4904H11.656ZM15.1916 4.07347C15.1916 2.88986 14.1672 1.99743 13 1.99743C11.7999 1.99743 10.8084 2.92324 10.8084 4.07347C10.8084 5.25708 11.8328 6.14952 13 6.14952C14.1672 6.14952 15.1916 5.25709 15.1916 4.07347Z" fill="#003DA6" stroke="#003DA6"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="my-search__result js-search__result" data-empty="Ничего не Найденно"></div>
         </div>
-        <div class="my-search__result js-search__result" data-empty="Ничего не Найденно"></div>
       </div>
     </section>
     <footer class="footer footer-index"></footer>
