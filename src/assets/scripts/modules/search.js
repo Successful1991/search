@@ -29,7 +29,7 @@ function init() {
 
         const microphoneIcon = document.querySelector('.js-search__micro');
         const microphoneIconEnd = document.querySelector('.js-search__micro-end');
-
+        microphoneIcon.classList.add('active')
         microphoneIcon.addEventListener('click', function() {
             recognition.start();
         });
