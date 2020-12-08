@@ -1,20 +1,10 @@
 .my-search{
-  //position: fixed;
-  //top: 0;
-  //left: 0;
   display: flex;
   height: 100%;
   width: 100%;
   max-width: 1360px;
   flex-direction: column;
   padding: 30px;
-  //background: rgba(0, 61, 166, 0.9);
-  //visibility: hidden;
-  //opacity: 0;
-  //z-index: 9999999;
-  //pointer-events: none;
-  //transition: opacity 0.5s ease-in;
-  //box-sizing: border-box;
   &-wrap{
     position: fixed;
     top: 0;
@@ -25,16 +15,32 @@
     align-items: flex-start;
     height: 100%;
     width: 100%;
-    //max-width: 1360px;
-    //flex-direction: column;
-    //padding: 30px;
-    background: rgba(0, 61, 166, 0.9);
     visibility: hidden;
     opacity: 0;
     z-index: 9999999;
     pointer-events: none;
     transition: opacity 0.5s ease-in;
     box-sizing: border-box;
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+      background: rgba(235, 242, 253, 0.82);
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background: rgba(0, 61, 166, 0.82);
+    }
   }
   *{
     box-sizing: border-box;
@@ -258,6 +264,7 @@
     background: #003796;
     transform: translate(0, 100%);
     z-index: 5;
+    font-family: "PFDinTextUniversal-Regular";
     visibility: hidden;
     pointer-events: none;
     transition: visibility 0.4s ease-in;
@@ -313,7 +320,7 @@
       }
     }
     &--title{
-      font-family: "PF Din Text Universal";
+      font-family: "PFDinTextUniversal-Bold";
       font-weight: bold;
       font-size: 16px;
       line-height: 26px;
@@ -322,7 +329,7 @@
       color:#EBF2FD;
     }
     &--text{
-      font-family: "PF Din Text Universal";
+      font-family: "PFDinTextUniversal-Regular";
       font-weight: 500;
       font-size: 12px;
       line-height: 26px;
@@ -338,13 +345,13 @@
   &__test{
     width: 100%;
     text-align: center;
-    font-family: "PF Din Text Universal";
+    font-family: "PFDinTextUniversal-Regular";
     font-weight: normal;
     font-size: 10px;
     line-height: 10px;
     letter-spacing: 1em;
     text-transform: uppercase;
-    color: #799BD0;
+    color: #ffffff;
   }
   &__lang{
     display: flex;
@@ -360,7 +367,7 @@
       }
     }
     &-title{
-      font-family: "PF Din Text Universal";
+      font-family: "PFDinTextUniversal-Regular";
       font-weight: normal;
       font-size: 24px;
       line-height: 1em;
@@ -567,5 +574,8 @@
     &__test{
       letter-spacing: 0.2em;
     }
+  }
+  .call-phone{
+    display: none;
   }
 }

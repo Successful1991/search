@@ -1,12 +1,21 @@
 function init() {
+
     let langList = {
         uk: "uk",
         ru: "ru-RU",
         en: "en-US"
     };
+    const empty = {
+        uk: 'Нічого не знайдено',
+        ru: 'Ничего не найдено',
+        en: 'Nothing found'
+    }
     // const separatorsForSearch = [',', ' ', ';']
 
-    const lang = document.querySelector("html").lang;
+    let lang = document.querySelector("html").lang;
+    // 'wp-content/themes/search/static/list_'+ newLang +'.json'
+    const hrefCur = '/wp-content/themes/search/static';
+    // const hrefCur = '/exelparse/json/list__'+ lang +'.json';
     const langName = langList[lang];
     const objRegByLang = {
         uk: /([аоуеиі])+$/gim,
@@ -15,7 +24,7 @@ function init() {
     // sliders init start
     let requireList = [];
     $(`.js-my-search__lang-button [data-lang=${lang}]`).addClass('active')
-    getList('/static/list_'+ lang +'.json')
+    getList(hrefCur + '/list_'+ lang +'.json')
     // getList('wp-content/themes/search/static/list_'+ lang +'.json')
 
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -61,6 +70,8 @@ function init() {
             $('.js-my-search__help-micro').addClass('my-active')
             new SpeechRecognition();
         }
+    } else {
+        document.querySelector('.js-search__micro').classList.remove('active')
     }
 
     // speechRecognitionList.addFromString(grammar, 1);
@@ -89,20 +100,20 @@ function init() {
     document.querySelector('.js-search__text').addEventListener('input',function (ev) {
         resultWrap.innerHTML = '';
         if(this.value.length < 3) return
-
         search(this.value)
     })
 
     $('.js-my-search__lang-button').on('click', 'button', function () {
-        const newLang = this.dataset.lang
+        lang = this.dataset.lang
         $('.js-my-search__lang-button .active').removeClass('active')
         this.classList.add('active')
-        // getList('wp-content/themes/search/static/list_'+ newLang +'.json', () => {
-        getList('/static/list_'+ newLang +'.json', () => {
+        getList(hrefCur + '/list_'+ lang +'.json', () => {
+            if($('.js-search__text')[0].value < 3) return
             search( $('.js-search__text')[0].value)
         })
 
     })
+
 
     function checkResult(speechResult) {
         const regex = new RegExp(/[\s;,]+/g);
@@ -117,7 +128,6 @@ function init() {
                 //         category: requireList[element].category
                 //     });
                 // }
-
                 // const add = speechResult.some(el => {
                 //     if( requireList[element].request.toLowerCase().includes(el.toLowerCase().replace(objRegByLang[lang], '')) ){
                 //         console.log('index++', requireList[element].request )
@@ -166,7 +176,7 @@ function init() {
 
     function setResult(result) {
         if(!result || result.length < 1) {
-            return `<div class="my-search__result-empty">${resultWrap.dataset.empty}</div>`
+            return `<div class="my-search__result-empty">${empty[lang]}</div>`
         }
 
         return result.reduce((previous, current) => {
